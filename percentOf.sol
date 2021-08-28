@@ -20,8 +20,7 @@ contract Divide {
     }
 
 
-    
-    //Let us find the percentage of 30 in 45.
+   // find the percentage of second number in first number.
     // Formula is  30/45 × 100 = 66.67%
     //The function returns the percentage defined in the second argument of the first
    //argument passed.
