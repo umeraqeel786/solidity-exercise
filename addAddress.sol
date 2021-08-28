@@ -18,15 +18,7 @@ contract Token_Address {
     }
 
     
-    function getAddress(bytes32 _name)  public view   returns (address[] memory addresss)
-    {
-        uint256 length = tokenSymbol[_name].length;
-        addresss = new address[](length);
-
-        for (uint256 i = 0; i < length; i++) {
-            addresss[i] = tokenSymbol[_name][i].tokenAddress;
-        }
-    }
+  
 
    
     function stringToBytes32(string memory source)
