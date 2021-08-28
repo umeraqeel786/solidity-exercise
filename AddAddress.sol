@@ -12,6 +12,11 @@ contract Token_Address {
     
     mapping(bytes32 => Address[]) tokenSymbol;
 
+
+
+//As Name type in bytes so first we need to covert our name to bytes 
+//below is function  that convert the stringToBytes
+
     function addAddresses(bytes32 _name, address _tokenAddress) public {
         Address memory myTokenAddress = Address(_tokenAddress);
         tokenSymbol[_name].push(myTokenAddress);
