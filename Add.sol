@@ -8,7 +8,7 @@ contract AddNumber {
     address private owner;
     uint256 a;
     uint256 b;
-    uint256 c;
+ 
   
     
     modifier onlyOwner() {
@@ -21,14 +21,9 @@ contract AddNumber {
     }
 
     
-    function Add(uint256 a, uint256 b) public onlyOwner  {
-        c = a+b;
-       
+    function Add(uint256 a, uint256 b) public onlyOwner view returns (uint256) {
+      
+       return a +b;
     }
-
-  
-  function Check_Ans() public view returns(uint256){
-      return c;
-  }
  
 }
