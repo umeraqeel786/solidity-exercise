@@ -30,7 +30,7 @@ contract MultiplyNumber {
      }
      
      
-     function Multiply(uint256 firstNumber, uint256 SecondNumber) public onlyOwner returns(uint256) {
+     function Multiply(uint256 firstNumber, uint256 SecondNumber) public onlyOwner  {
      mul( firstNumber ,  SecondNumber);
      }
     
