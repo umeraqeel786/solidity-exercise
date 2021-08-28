@@ -22,21 +22,20 @@ contract BaseOperations  is Ownable   {
         owner = msg.sender; 
     }
 
- struct Address {
-       
-        address tokenAddress;
+    
+    struct Address {
+       address tokenAddress;
     }
 
-//Add
+/////////// ADD //////////////
     
     function Add(uint256 a, uint256 b) public onlyOwner view returns (uint256) {
-      
        return a +b;
     }
 
  
  
- //Divide
+ ///////////// DIVIDE //////////////////////
 
     
     function Divide(uint256 firstNumber , uint256 SecondNumber) public onlyOwner view returns(uint Ans, uint remainder){
@@ -46,7 +45,7 @@ contract BaseOperations  is Ownable   {
    }
    
    
-   //Multiply 
+ ///////////////// MULTIPLY ///////////////// 
      function mul(uint256 firstNumber , uint256 SecondNumber) internal returns (uint256){
           for (uint j=1; j<=  SecondNumber;  j ++) {  
           Ans += firstNumber;        
@@ -56,19 +55,19 @@ contract BaseOperations  is Ownable   {
      
      
      function Multiply(uint256 firstNumber, uint256 SecondNumber) public onlyOwner  returns (uint256) {
-     mul( firstNumber ,  SecondNumber);
+    
+    mul( firstNumber ,  SecondNumber);
      
      }
     
    
   
-  function Check_Mul_Ans() public view returns(uint256){
+    function Check_Mul_Ans() public view returns(uint256){
       return Ans;
-
-  }
+    }
   
   
-  // getPercent
+  //////////////// GetPercent /////////////////////////
   
    function getPercent(uint firstNumber, uint SecondNumber) public pure returns(uint percent) {
         uint denominator = SecondNumber * 1000;
@@ -77,7 +76,11 @@ contract BaseOperations  is Ownable   {
         return temp / 10;
     }
 
-// addAddresses
+
+
+
+
+  /////////////// addAddresses ////////////////////////
 
     mapping(bytes32 => Address[]) tokenSymbol;
    
